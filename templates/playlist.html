@@ -10,8 +10,10 @@
 </div>
 
 <ul>
-  <li> {{ playlist.songs.title }} </li>
-</ul>
+  {% for song in playlist.songs %}
+    <li><a href="/songs/{{song.id}}">{{ song.title }}</a></li>
+  {% endfor %}
+  </ul>
 
 
 <p>
